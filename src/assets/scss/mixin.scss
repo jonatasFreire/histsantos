@@ -1,0 +1,15 @@
+@mixin text-align($type){
+    @if( $type == 'c'){
+        @extend %text-align-center;
+    }
+    @if( $type == 'l'){
+        @extend %text-align-left;
+    }
+    @if( $type == 'r'){
+        @extend %text-align-right;
+    }
+}
+@mixin grid-create($col:auto, $row:auto){
+    @extend %grid;
+    grid: $row / $col;
+}
